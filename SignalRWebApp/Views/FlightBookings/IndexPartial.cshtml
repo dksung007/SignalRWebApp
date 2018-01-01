@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SignalRWebApp.Models.FlightBookings>
+
+@Html.Hidden("NotifierEntity", (object)ViewBag.NotifierEntity)
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FlightId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.From)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeatsAvailability)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.From)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeatsAvailability)
+            </td>
+        </tr>
+    }
+
+</table>
+
